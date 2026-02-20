@@ -13,7 +13,7 @@ app.use("/api/inngest",serve({client:inngest, functions}));
 
 //middleware
 app.use(express.json());
-app.use(cors({origin:ENV_CLIENT_URL,credentials:true}));
+app.use(cors({origin:ENV.CLIENT_URL,credentials:true}));
 
 app.get("/home",(req,res)=>{
     res.send("working properly fine?")
