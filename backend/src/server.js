@@ -1,11 +1,15 @@
 import express from "express";
 import path from "path";
+import  {serve} from "inngest";
 
 import cors from "cors";
 import { ENV } from "./lib/env.js";
 import { connectDB } from "./lib/db.js";
+import { fucntions, inngest } from "./lib/inngest.js";
 const app=express();
 const __dirname = path.resolve();
+
+app.use("/api/inngest",serve({client:inngest, fucntions}));
 
 //middleware
 app.use(express.json());
