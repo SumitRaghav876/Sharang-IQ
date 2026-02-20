@@ -5,8 +5,7 @@
   "main": "src/server.js",
   "scripts": {
   "dev": "nodemon src/server.js",
-  "start": "node src/server.js",
-  "build:frontend": "cd ../frontend && npm install && npm run build && cp -r dist ../backend/"
+  "start": "node src/server.js"
   },
   "keywords": [],
   "author": "",
