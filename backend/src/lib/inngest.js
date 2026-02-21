@@ -3,7 +3,10 @@ import {connectDB} from "./db.js";
 import User from "../models/User.js";
 
 export const inngest=new Inngest(
-    {id:"sharang-iq"}
+    {
+        id:"sharang-iq",
+        eventKey: process.env.INNGEST_EVENT_KEY,
+    }
 );
 
 const syncUser=inngest.createFunction(
